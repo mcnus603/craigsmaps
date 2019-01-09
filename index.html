@@ -1,0 +1,375 @@
+
+<html>
+  <head>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon"/>
+
+    <title>Craigsmap</title>
+    <style>
+
+      @font-face {
+        font-family: "foundersLight";
+        src: url("fonts/FoundersGroteskTextTest-Regular.otf");
+      }
+
+     @font-face {
+        font-family: "jansonReg";
+        src: url("fonts/JansonTextLTStd-Roman.otf");
+
+     }
+
+
+  /*   Smartphone landscape and portrait*/
+    @media only screen and (min-device-width : 320px) and (max-device-width : 580px) {
+
+      body, html{
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        overflow-y: scroll;
+      }
+
+      #map {
+        margin-top: 40px;
+        width: 100%;
+        height: 40vh;
+        display: inline-block;
+    /*    background-color:blue;*/
+      }
+      
+      #images{
+      display: inline-block;
+      margin-top: 20px;
+      width: 80vw;
+       margin-left: 10vw;
+
+      }
+
+      #horzContainer{
+        width: 100vw;
+        display: inline-block;
+
+      }
+
+      #text{
+          width: 100vw;
+          height: auto;
+          display: inline-block;
+          top: 80vh;
+          background-color: #DDDDDD;
+          overflow-y:scroll;
+          overflow-x: hidden;
+      }
+       .missedTitle{
+          color: #0D3FFB;
+          width: 100vw;
+          font-family: foundersLight, helvetica;
+          font-size: 20px;
+          line-height: 70px;
+          line-height: 30px;
+          margin-left: 5vw;
+        
+       }
+
+       .missedDate{
+          color: #0D3FFB;
+          width: 90vw;
+          font-family: foundersLight, helvetica;
+          font-size: 24px;
+          margin-left: 5vw;
+
+       }
+        .missedDescrip{
+          color: #0D3FFB;
+          width: 90vw;
+          font-family: jansonReg;
+          font-size: 24px;
+          margin-left: 5vw;
+          border-bottom: 3px solid #0D3FFB;
+       }
+
+
+      .free{
+        height: 30vh;
+        margin-top: 5vh;
+        width: auto;
+        top: 90vh;
+        background-color: #0D3FFB;
+        filter: gray; 
+        -webkit-filter: grayscale(2); 
+        filter: grayscale(2); 
+        float: left;
+        margin-right: 50px;
+       }
+
+
+      #banner{
+        height: 40px;
+        width: 210vw;
+        background-color: #0D3FFB;
+        position: fixed;  
+       }
+
+       #bannerText1{
+        display: inline-block;
+        height: 24px;
+        width: 100vw;
+
+
+        color: white;
+        font-size: 24px;
+        font-family: foundersLight;
+        overflow: hidden;
+         margin-top: -2px;
+        animation: marqueeone 18s linear infinite;
+        
+       }
+
+       #bannerText2{
+        display: inline-block; 
+        width: 100vw;
+        height: 24px;
+        margin-top: -2px;
+        color: white;
+        font-size: 24px;
+        font-family: foundersLight;
+        overflow: hidden;
+        
+        animation: marqueetwo 18s linear infinite;
+        animation-delay: 9s;
+
+       }
+
+    }
+
+    /*laptops and desktops*/
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1824px){
+      body, html{
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      #map {
+        top: 30px;
+        height: 100vh; 
+        width: 45vw; 
+        left: 55vw;
+        position: absolute;
+       }
+
+      #horzContainer {
+        top: 30px;
+        background-color: yellow;
+      }
+
+      #images{
+        top: 30px;
+        height: 100vh;
+        width: 35vw;
+        position: absolute;
+        left: 20vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+       }
+
+     #text{
+        top: 30px;
+        width: 20vw;
+        height: 100vh;
+        background-color: #DDDDDD;
+        position: absolute;
+        left: 0;
+        overflow-y:scroll;
+        overflow-x: hidden;
+       }
+
+
+       .missedTitle{
+        width: 17.5vw;
+        font-family: foundersBold, helvetica;
+        font-size: 28px;
+        line-height: 30px;
+        margin-left: 1vw;
+        
+       }
+
+       .missedDate{
+        width: 17.5vw;
+        font-family: jansonReg;
+        font-size: 12px;
+        margin-left: 1vw;
+
+       }
+        .missedDescrip{
+        width: 17.5vw;
+        font-family: jansonReg;
+        font-size: 16px;
+        line-height: 20px;
+        margin-left: 1vw;
+        border-bottom: 3px solid #0D3FFB;
+       }
+
+
+      .free{
+        width: 25vw;
+        height: auto;
+        margin-left: 5vw;
+        margin-top: 20px;
+        background-color: #0D3FFB;
+        filter: gray; 
+        -webkit-filter: grayscale(2); 
+        filter: grayscale(2); 
+       }
+
+       #errorImage{
+        font-family: foundersLight; 
+        font-size: 24px;
+        width: 17.5vw;
+        margin-left: 1vw;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+       }
+      #errorText{
+        font-family: foundersLight; 
+        font-size: 24px;
+        width: 17.5vw;
+        margin-left: 1vw;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+       }
+
+      #banner{
+        height: 30px;
+        width: 210vw;
+        background-color: #0D3FFB;
+        position: fixed;  
+       }
+
+       #bannerText1{
+        display: inline-block;
+        height: 24px;
+        width: 100vw;
+
+
+        color: white;
+        font-size: 16px;
+        font-family: foundersLight;
+        overflow: hidden;
+         margin-top: 2px;
+        animation: marqueeone 18s linear infinite;
+        
+       }
+
+       #bannerText2{
+        display: inline-block; 
+        width: 100vw;
+        height: 24px;
+        margin-top: 2px;
+        color: white;
+        font-size: 16px;
+        font-family: foundersLight;
+        overflow: hidden;
+        
+        animation: marqueetwo 18s linear infinite;
+        animation-delay: 9s;
+
+       }
+
+
+    }
+
+
+
+/*    Universal styles*/
+
+       a{
+        text-decoration: none;
+        color: #0D3FFB;
+       }
+
+       a:hover{
+        color: black;
+
+      }
+       
+       .free:hover{
+        filter: none;
+       }
+
+
+
+      @keyframes marqueeone {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+        transform: translateX(-100%);
+        }  
+      }
+
+      @keyframes marqueetwo {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+        transform: translateX(-200%);
+        }
+      }
+
+
+    ::-webkit-scrollbar {
+      width: 9px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: black; 
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background-color: white;
+      border: 2px solid black;
+    }
+
+
+    </style>    
+  </head>
+
+  <body>
+
+    <div id = "banner">
+    <div id="bannerText1"></div>
+    <div id = "bannerText2"></div>
+
+     </div>
+        <div id="map"> </div>
+    <div id="text"></div>
+    <div id = "horzContainer">
+      <div id="images"></div>
+    </div>
+  
+
+    <script type="text/javascript" src="assets/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/jquery.query-yql.min.js"></script>
+
+    <script type="text/javascript" src = "sketch.js"></script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaYub8Xz9xx5mt8RQ3SrXUpo2nQFN_8Lw&callback=initMap">
+    </script>
+
+  </body>
+</html>
+
+
+<!-- AIzaSyCZpHGHbaAC_hyuCXjlbzlBgKbhNyi_fq4 -->
+
+
+
+
+
+
